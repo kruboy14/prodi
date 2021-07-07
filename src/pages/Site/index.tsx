@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import styles from './Site.module.scss'
 
-const Site = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const Site: React.FC<any> = () => {
+  
+  return <div className={styles.container}>
+    <Header/>
+    <Footer/>
+  </div>;
+};
 
-export default Site
+export default Site;

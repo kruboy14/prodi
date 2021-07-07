@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'OldStandard';
+  src: local('OldStandard'),
+    url('../../fonts/OldStandard.ttf') format('truetype');
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+.logo {
+  font-family: 'OldStandard';
+  font-size: 46px;
+}
+.menu {
+  display: flex;
+  font-size: 18px;
+  @media screen and (max-width: 576px){
+    display: none;
+  }
+}
+.menuItem {
+  margin-left: 15px;
+  padding: 20px;
+  cursor: pointer;
+}
+.itemActive {
+  border-bottom: 2px solid black;
+}
+.burger {
+  display: none;
+  @media screen and (max-width: 576px){
+    display: block;
+  }
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+  transform-origin: left center;
+}
+
+.burger span:nth-child(2) {
+  top: 15px;
+  transform-origin: left center;
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+  transform-origin: left center;
+}
+
+.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 3px;
+  left: 3px;
+}
+
+.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 24px;
+  left: 3px;
+}

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Admin = () => {
+const Loader = () => {
   return (
     <div>
-      Admin
+      Loading
     </div>
   )
 }
 
-export default Admin
+export default Loader

@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Admin from './pages/Admin';
+import Site from './pages/Site';
+import PageError from './components/PageError';
 function App() {
   return (
     <div className="App">
@@ -8,11 +11,11 @@ function App() {
           <Route exact path="/admin">
             <Admin />
           </Route>
-          <Route exact path="/">
+          <Route  path="/">
             <Site />
           </Route>
           <Route path="*">
-           <NotFound/>
+            <PageError />
           </Route>
         </Switch>
       </BrowserRouter>
