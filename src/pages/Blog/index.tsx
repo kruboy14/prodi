@@ -3,7 +3,7 @@ import styles from './Blog.module.scss';
 import { Link } from 'react-router-dom';
 import { Divider } from '@material-ui/core';
 import ArticleItem from '../../components/ArticleItem';
-import Button from '../../components/Button';
+
 const Site: React.FC<any> = () => {
   const id = '1';
   return (
@@ -57,9 +57,43 @@ const Site: React.FC<any> = () => {
               title="Here are some things you should know regarding how we work "
             />
           </Link>
+          <Link to={id} className={styles.item}>
+            <ArticleItem
+              className={styles.itemContent}
+              imgUrl="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2017-05/0x060a2b340101010201010f12132626ed011ab9049177058001b9000D3A162A40_0.jpeg?itok=jaV2AijZ"
+              title="Here are some things you should know regarding how we work "
+            />
+          </Link>
+          <Link to={id} className={styles.item}>
+            <ArticleItem
+              className={styles.itemContent}
+              imgUrl="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2017-05/0x060a2b340101010201010f12132626ed011ab9049177058001b9000D3A162A40_0.jpeg?itok=jaV2AijZ"
+              title="Here are some things you should know regarding how we work "
+            />
+          </Link>
+          <Link to={id} className={styles.item}>
+            <ArticleItem
+              className={styles.itemContent}
+              imgUrl="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2017-05/0x060a2b340101010201010f12132626ed011ab9049177058001b9000D3A162A40_0.jpeg?itok=jaV2AijZ"
+              title="Here are some things you should know regarding how we work "
+            />
+          </Link>
+          <Link to={id} className={styles.item}>
+            <ArticleItem
+              className={styles.itemContent}
+              imgUrl="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2017-05/0x060a2b340101010201010f12132626ed011ab9049177058001b9000D3A162A40_0.jpeg?itok=jaV2AijZ"
+              title="Here are some things you should know regarding how we work "
+            />
+          </Link>
+          <Link to={id} className={styles.item}>
+            <ArticleItem
+              className={styles.itemContent}
+              imgUrl="https://www.imgacademy.com/sites/default/files/styles/scale_1700w/public/2017-05/0x060a2b340101010201010f12132626ed011ab9049177058001b9000D3A162A40_0.jpeg?itok=jaV2AijZ"
+              title="Here are some things you should know regarding how we work "
+            />
+          </Link>
         </div>
       </div>
-      <Button />
     </div>
   );
 };

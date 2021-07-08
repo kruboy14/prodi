@@ -33,7 +33,7 @@ const ArticleItem: React.FC<ArticleItemProp> = ({
       })}>
       <img style={{...style?.img}} width={imgWidth} height={imgHeight} className={styles.thumbnail} src={imgUrl} alt="" />
       <div style={{ ...style?.title }} className={styles.title}>
-        Here are some things you should know regarding how we 
+        {title}
       </div>
     </article>
   );
