@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         ) : null}
         <div className={styles.copyright}>
-          © 2012–2020 Nordic Rose Co. All rights reserved.
+          © 2021 Kruboy Co.
         </div>
       </div>
     </footer>
