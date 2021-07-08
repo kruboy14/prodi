@@ -5,8 +5,8 @@
     url('../../fonts/OldStandard.ttf') format('truetype');
 }
 .container {
-  position: fixed;
-  bottom: 0;
+  overflow: hidden;
+  margin-top: auto;
   background-color: $black;
   width: 100%;
   color: $white;

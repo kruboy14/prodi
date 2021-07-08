@@ -1,7 +1,9 @@
 .container{
-  position: relative;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  min-height: 100vh;
+
   @media screen and (max-width: 1024px){
-    padding: 20px;
   }
 }

@@ -1,3 +1,13 @@
 .container{
   display: flex;
 }
+.title{
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  line-height: 1.2;
+}
+.thumbnail{
+  width: 100%;
+}

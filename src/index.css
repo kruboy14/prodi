@@ -28,7 +28,7 @@ code {
 :active {
   outline: none;
 }
-a{
+a {
   color: inherit;
 }
 a:focus,
@@ -90,5 +90,3 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
-
-
