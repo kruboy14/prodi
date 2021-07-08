@@ -6,6 +6,8 @@ interface ArticleItemProp {
   imgUrl: string;
   title: string;
   className?: any;
+  imgHeight?: number | string;
+  imgWidth?: number| string;
   style?: {
     root?: React.CSSProperties;
     img?: React.CSSProperties;
@@ -15,23 +17,25 @@ interface ArticleItemProp {
 const ArticleItem: React.FC<ArticleItemProp> = ({
   children,
   imgUrl,
+  imgWidth,
+  imgHeight,
   title,
   className,
   style,
 }) => {
   return (
-    <div
+    <article
       style={{...style?.root}}
       className={classNames({
         [styles.container]: true,
         [className]: className,
         
       })}>
-      <img style={{...style?.img}} className={styles.thumbnail} src={imgUrl} alt="" />
+      <img style={{...style?.img}} width={imgWidth} height={imgHeight} className={styles.thumbnail} src={imgUrl} alt="" />
       <div style={{ ...style?.title }} className={styles.title}>
         Here are some things you should know regarding how we 
       </div>
-    </div>
+    </article>
   );
 };
 

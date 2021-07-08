@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './About.module.scss';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import TelegramIcon from '@material-ui/icons/Telegram';
 const About = () => {
   return (
     <div className={styles.container}>
@@ -41,15 +41,17 @@ const About = () => {
         </div>
       </div>
       <div className={styles.social}>
-        <a href="#">
-          <FacebookIcon  fontSize='large'/>
-        </a>
-        <a href="#">
-          <InstagramIcon  fontSize='large'/>
-        </a>
-        <a href="#">
-          <TwitterIcon   fontSize='large'/>
-        </a>
+        <div className={styles.socialContent}>
+          <a href="#">
+            <FacebookIcon fontSize="large" />
+          </a>
+          <a href="#">
+            <InstagramIcon fontSize="large" />
+          </a>
+          <a href="#">
+            <TelegramIcon fontSize="large" />
+          </a>
+        </div>
       </div>
     </div>
   );
