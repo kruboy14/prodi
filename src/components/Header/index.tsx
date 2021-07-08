@@ -1,28 +1,29 @@
 import React from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { Link, useLocation, useRouteMatch } from 'react-router-dom';
 import styles from './Header.module.scss';
 import classNames from 'classnames';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
 interface IMenuItem {
-  pathname: string;
+  path: string;
   value: string;
 }
 
 const Header: React.FC = () => {
-  const { path } = useRouteMatch();
+  const { pathname } = useLocation();
   const [IsBurgerOpen, setBurgerOpen] = useState<boolean>(false);
   const [menuItems, setMenuItems] = useState<IMenuItem[]>([
     {
-      pathname: '/',
+      path: '/',
       value: 'Blog',
     },
     {
-      pathname: '/about',
+      path: '/about',
       value: 'About',
     },
   ]);
+
   const hanldeBurgerClick = (e: React.MouseEvent<HTMLDivElement>) => {
     setBurgerOpen((prev) => !prev);
   };
@@ -32,18 +33,20 @@ const Header: React.FC = () => {
   return (
     <>
       <header className={styles.container}>
-        <div className={styles.logo}>ProDi</div>
+      <Link to='/'> <div className={styles.logo}>ProDi</div> </Link>
         <nav>
           <ul className={styles.menu}>
-            {menuItems.map(({ value, pathname }, index) => (
-              <li
-                key={index}
-                className={classNames({
-                  [styles.menuItem]: true,
-                  [styles.itemActive]: path === pathname,
-                })}>
-                <Link to={pathname}>{value}</Link>
-              </li>
+            {menuItems.map(({ value, path }, index) => (
+              <Link to={path}>
+                <li
+                  key={index}
+                  className={classNames({
+                    [styles.menuItem]: true,
+                    [styles.itemActive]: pathname === path,
+                  })}>
+                  {value}
+                </li>
+              </Link>
             ))}
           </ul>
         </nav>
@@ -64,20 +67,21 @@ const Header: React.FC = () => {
           [styles.open]: IsBurgerOpen,
         })}>
         <ul className={styles.burgerMenuList}>
-          {menuItems.map(({ value, pathname }, index) => (
-            <li
-              key={index}
-              style={{ transition: `${index + 1 * 0.25 + 0.25}s` }}
-              className={classNames({
-                [styles.burgerMenuItem]: true,
-                [styles.open]: IsBurgerOpen,
-              })}>
-              <Link to={pathname}>{value}</Link>
-            </li>
+          {menuItems.map(({ value, path }, index) => (
+            <Link to={path}>
+              <li onClick={() =>  setBurgerOpen((prev) => !prev)}
+                key={index}
+                style={{ transition: `${index + 1 * 0.25 + 0.25}s` }}
+                className={classNames({
+                  [styles.burgerMenuItem]: true,
+                  [styles.open]: IsBurgerOpen,
+                })}>
+                {value}
+              </li>
+            </Link>
           ))}
         </ul>
       </nav>
-      <main>Lorem*100</main>
     </>
   );
 };

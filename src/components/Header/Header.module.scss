@@ -3,12 +3,14 @@
   src: local('OldStandard'),
     url('../../fonts/OldStandard.ttf') format('truetype');
 }
+@import '../../styles/variables.scss';
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 .logo {
   z-index: 1001;
@@ -50,7 +52,7 @@
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #000;
+  background: $black;
   border-radius: 3px;
   opacity: 1;
   left: 0;
@@ -98,8 +100,8 @@
   font-size: 32px;
   z-index: 1000;
   height: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
+  background-color: rgba($white, 0.5);
+  backdrop-filter: blur(3.5px);
   transform: translateX(-100%);
   transition: 0.3s;
   @media screen and (max-width: 576px) {

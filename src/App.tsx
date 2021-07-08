@@ -8,12 +8,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route exact path="/admin">
+          <Route  path="/admin">
             <Admin />
           </Route>
-          <Route  path="/">
+          
+          <Route path="/">
             <Site />
           </Route>
+
           <Route path="*">
             <PageError />
           </Route>
