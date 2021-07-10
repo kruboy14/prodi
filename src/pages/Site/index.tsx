@@ -3,9 +3,9 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import About from '../../pages/About';
-import Blog from '../../pages/Blog';
-import Article from '../../pages/Article';
+import About from '../Admin/About';
+import Blog from './Blog';
+import Article from './Article';
 
 import styles from './Site.module.scss';
 

@@ -33,7 +33,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header className={styles.container}>
-      <Link to='/'> <div className={styles.logo}>ProDi</div> </Link>
+      <Link to='/'> <h1 className={styles.logo}>ProDi</h1> </Link>
         <nav>
           <ul className={styles.menu}>
             {menuItems.map(({ value, path }, index) => (
