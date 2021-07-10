@@ -1,0 +1,68 @@
+@import '../../styles/variables.scss';
+
+.container {
+  margin: 0 5%;
+}
+.title {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.content {
+  margin-top: 3%;
+  display: flex;
+  margin-bottom: 5%;
+  @media screen and (max-width: 920px) {
+    flex-direction: column;
+  }
+}
+.textContainer {
+  margin: 0 auto;
+  max-width: 520px;
+}
+.textTitle {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.text {
+  p {
+    margin-bottom: 1rem;
+  }
+  line-height: 1.3;
+}
+.img {
+  width: 100%;
+  height: auto;
+}
+.socialContent {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  transform: scale(1);
+  background-color: $white;
+  a {
+    margin: 0 4px;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+.social {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+  &::before {
+    z-index: -1;
+
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    right: 0;
+    left: 0;
+    top: 50%;
+  }
+}

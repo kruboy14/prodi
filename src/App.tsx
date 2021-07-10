@@ -1,17 +1,24 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Admin from './pages/Admin';
-import Site from './pages/Site';
-import PageError from './components/PageError';
+
+
+import Loader from './components/Loader';
+import ScrollToTop from './routes/ScrollToTop';
+
+const Site = React.lazy(() => import('./pages/Site'))
+const PageError = React.lazy(() => import('./components/PageError'))
+const Admin = React.lazy(() => import('./pages/Admin'))
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
+          <React.Suspense fallback={<Loader/>}>
         <Switch>
-          <Route  path="/admin">
+          <Route path="/admin">
             <Admin />
           </Route>
-          
+
           <Route path="/">
             <Site />
           </Route>
@@ -20,6 +27,8 @@ function App() {
             <PageError />
           </Route>
         </Switch>
+          </React.Suspense>
+
       </BrowserRouter>
     </div>
   );

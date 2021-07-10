@@ -6,26 +6,36 @@ interface ArticleItemProp {
   imgUrl: string;
   title: string;
   className?: any;
+  imgHeight?: number | string;
+  imgWidth?: number| string;
+  style?: {
+    root?: React.CSSProperties;
+    img?: React.CSSProperties;
+    title?: React.CSSProperties;
+  };
 }
 const ArticleItem: React.FC<ArticleItemProp> = ({
   children,
   imgUrl,
+  imgWidth,
+  imgHeight,
   title,
   className,
+  style,
 }) => {
   return (
-    <div className={classNames({ [styles.container]: true, [className]: className })}>
-      <img
-        className={styles.thumbnail}
-        width="300"
-        height="200"
-        src={imgUrl}
-        alt=""
-      />
-      <div className={styles.title}>
-        Here are some things you should know regarding how we work{' '}
+    <article
+      style={{...style?.root}}
+      className={classNames({
+        [styles.container]: true,
+        [className]: className,
+        
+      })}>
+      <img style={{...style?.img}} width={imgWidth} height={imgHeight} className={styles.thumbnail} src={imgUrl} alt="" />
+      <div style={{ ...style?.title }} className={styles.title}>
+        {title}
       </div>
-    </div>
+    </article>
   );
 };
 

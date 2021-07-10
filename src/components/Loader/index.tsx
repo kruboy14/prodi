@@ -1,11 +1,18 @@
-import React from 'react'
-
+import React from 'react';
+import style from './Loader.module.scss'
 const Loader = () => {
   return (
-    <div>
-      Loading
-    </div>
-  )
-}
+  <div className={style.container}>  <div className={style.ldsRoller}>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div></div>
+  );
+};
 
-export default Loader
+export default Loader;

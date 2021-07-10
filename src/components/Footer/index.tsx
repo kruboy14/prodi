@@ -11,19 +11,26 @@ const Footer = () => {
     <footer className={styles.container}>
       <div className={styles.line}>
         {textLine.map((val, index) => {
-          
-          
-         return <span key={index} className={classNames({[styles.lineWord]: true ,[styles.big]: (index + 2) % 2 === 0 })}>
-            {val}
-          </span>;
+          return (
+            <span
+              key={index}
+              className={classNames({
+                [styles.lineWord]: true,
+                [styles.big]: (index + 2) % 2 === 0,
+              })}>
+              {val}
+            </span>
+          );
         })}
       </div>
       <div className={styles.content}>
         <div className={styles.title}>ProDi</div>
         <div className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu velit
-          tempus erat egestas efficitur. In hac habitasse platea dictumst. Fusce
-          a nunc eget ligula suscipit finibus.
+          ProDi - це особистий блог у якому авторка висловлює думки на різні
+          події, новини та цікавинки.
+          
+          Ви можете прочитати пости на абсолютно різні теми, починаючи бьюті
+          сферою та закінчуючи важливими світовими подіями
         </div>
         {path === '/about' ? (
           <div className={styles.links}>
@@ -32,9 +39,7 @@ const Footer = () => {
             <a href="#">Instagram</a>
           </div>
         ) : null}
-        <div className={styles.copyright}>
-          © 2012–2020 Nordic Rose Co. All rights reserved.
-        </div>
+        <div className={styles.copyright}>© 2021 Kruboy Co.</div>
       </div>
     </footer>
   );

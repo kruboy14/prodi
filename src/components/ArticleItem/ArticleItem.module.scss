@@ -1,3 +1,22 @@
+@import '../../styles/variables.scss';
+
+
 .container{
   display: flex;
+  transition: .3s;
+  &:hover{
+    color: $blue;
+  }
+}
+.title{
+  max-width: 250px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  line-height: 1.2;
+ 
+}
+.thumbnail{
+  width: 100%;
+  height: auto;
 }
