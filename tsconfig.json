@@ -5,7 +5,16 @@
       "dom",
       "dom.iterable",
       "esnext"
+
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@styled/*": ["src/components/styled/*"],
+      "@pages/*": ["src/pages/*"],
+      "@assets/*": ["src/assets/*"],
+      "@services/*": ["src/services/*"]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
