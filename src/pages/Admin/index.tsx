@@ -1,13 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PrivateRoute from '../../routes/PrivateRouter';
+import AdminDashBoard from './AdminDashboard';
 
 const Admin = () => {
   return (
     <div>
       <Switch>
         <PrivateRoute exact path="/admin">
-          121
+          <AdminDashBoard/>
         </PrivateRoute>
 
         <Route exact path="/admin/login">

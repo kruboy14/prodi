@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 const PrivateRoute: React.FC<any> = ({ children, ...rest }) => {
-  let auth = false;
+  let auth = true;
   return (
     <Route
       {...rest}
