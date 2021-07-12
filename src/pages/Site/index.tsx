@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
-import Footer from '../../components/Footer';
-import Header from '@components/Header';
+import Footer from '@components/Site/Footer';
+import Header from '@components/Site/Header';
 import About from './About';
 import Blog from './Blog';
 import Article from './Article';

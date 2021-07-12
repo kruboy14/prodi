@@ -13,7 +13,8 @@
       "@styled/*": ["src/components/styled/*"],
       "@pages/*": ["src/pages/*"],
       "@assets/*": ["src/assets/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@/*": ["src/*"],
     },
     "allowJs": true,
     "skipLibCheck": true,

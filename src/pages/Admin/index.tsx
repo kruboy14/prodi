@@ -7,13 +7,12 @@ const Admin = () => {
   return (
     <div>
       <Switch>
-        <PrivateRoute exact path="/admin">
-          <AdminDashBoard/>
-        </PrivateRoute>
-
         <Route exact path="/admin/login">
           12
         </Route>
+        <PrivateRoute  path="/admin">
+          <AdminDashBoard />
+        </PrivateRoute>
       </Switch>
     </div>
   );

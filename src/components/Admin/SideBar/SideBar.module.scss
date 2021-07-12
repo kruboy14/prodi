@@ -1,0 +1,45 @@
+@import '@/styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: $dashboardBg;
+  color: $dashboardTxt;
+  flex: 0 1 15%;
+  padding: 10px 0 0 10px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  margin-right: 5px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  span {
+    margin-right: 5px;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  &:hover {
+    background-color: $dashboardHover;
+  }
+ 
+  span {
+    margin-left: 5px;
+  }
+}

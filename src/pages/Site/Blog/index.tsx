@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import styles from './Blog.module.scss';
 import { Link } from 'react-router-dom';
 import { Divider } from '@material-ui/core';
-import ArticleItem from '../../../components/ArticleItem';
+import ArticleItem from '@components/Site/ArticleItem';
 import { useState } from 'react';
 import { useRef } from 'react';
-import useScroll from '../../../hooks/useScroll';
+import useScroll from '@/hooks/useScroll';
 import { useCallback } from 'react';
 interface IFecthArticle {
   limit: number;

@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.itemSub {
+  margin-left: 1rem;
+}
+
+.subNav-enter {
+  opacity: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.subNav-enter-active {
+  opacity: 1;
+
+  transform: translateY(0%);
+  transition: 300ms;
+}
+.subNav-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.subNav-exit-active {
+  transform: transformX(-100%);
+  opacity: 0;
+  transition: 300ms;
+}
