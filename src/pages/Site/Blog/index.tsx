@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import styles from './Blog.module.scss';
 import { Link } from 'react-router-dom';
 import { Divider } from '@material-ui/core';
-import ArticleItem from '../../components/ArticleItem';
+import ArticleItem from '@components/Site/ArticleItem';
 import { useState } from 'react';
 import { useRef } from 'react';
-import useScroll from '../../hooks/useScroll';
+import useScroll from '@/hooks/useScroll';
 import { useCallback } from 'react';
 interface IFecthArticle {
   limit: number;
@@ -75,7 +75,7 @@ const Site: React.FC = () => {
       </Link>
       <div className={styles.articlesSection}>
         <Divider />
-        <div className={styles.articlesTitle}>All articles</div>
+        <h2 className={styles.articlesTitle}>All articles</h2>
         <div className={styles.articlesList}>
           {articles.map(({ id, url, title }) => (
             <Link key={id} to={String(id)} className={styles.item}>

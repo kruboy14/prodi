@@ -5,14 +5,14 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TelegramIcon from '@material-ui/icons/Telegram';
 const About = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>About</div>
+    <main className={styles.container}>
+      <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <div className={styles.textContainer}>
           <div className={styles.textTitle}>Hi, i’m Diana Prosyanik</div>
           <div className={styles.text}>
             <p>
-              {' '}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
               repellat voluptas quisquam consectetur corrupti minima aspernatur,
               assumenda explicabo reprehenderit nobis. Lorem ipsum dolor sit
@@ -53,7 +53,7 @@ const About = () => {
           </a>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

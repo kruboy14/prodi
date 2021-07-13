@@ -1,8 +1,8 @@
-@import '../../styles/variables.scss';
+@import '@/styles/variables.scss';
 @font-face {
   font-family: 'OldStandard';
   src: local('OldStandard'),
-    url('../../fonts/OldStandard.ttf') format('truetype');
+    url('../../../fonts/OldStandard.ttf') format('truetype');
 }
 .container {
   overflow: hidden;

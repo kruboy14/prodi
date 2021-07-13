@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import PageError from '../../components/PageError';
+import PageError from '@components/PageError';
 interface ParamTypes {
   articleId: string;
 }

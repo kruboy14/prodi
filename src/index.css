@@ -105,3 +105,8 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+
+.ck-content{
+  padding-left: 25px !important;
+}
